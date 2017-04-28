@@ -31,8 +31,12 @@ As seguintes issues deverão ser abertas para chegar-mos na configuração mais 
 
 ### Documentação da api
 
-get    '/products'
-post   '/products'
-get    '/product/:id'
-put    '/product/:id'
-delete '/product/:id'
+Requisições Para produto.
+
+verbo  | path						| Retorno																| status code
+-------|----------------|---------------------------------------|-------------
+get    | '/products'		|Retorna um json com todos os produtos	| 
+post   | '/products'		|Retorna um json com o objeto cadastrado|	
+get    | '/product/:id'	|Retorna o produto com o id especificado|	200(succes) /	412(error)
+put    | '/product/:id'	|Altera o produto												|	200(succes) / 412(error)
+delete | '/product/:id'	|Deleta o produto												|	200(succes) / 401(error)
